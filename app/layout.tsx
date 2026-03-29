@@ -4,6 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: { default: 'ゴルフLAB', template: '%s | ゴルフLAB' },
   description: 'ゴルフ初心者から上級者まで役立つ上達法とギア情報を発信',
+  verification: { google: 'xpdiFRYHloMJxfhCT-IMD08p5na4v9WUqvPY9OrDsHs' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
