@@ -2,41 +2,32 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: { default: 'ゴルフLAB', template: '%s | ゴルフLAB' },
-  description: 'ゴルフ初心者から上級者まで役立つ上達法とギア情報を発信',
-  verification: { google: 'xpdiFRYHloMJxfhCT-IMD08p5na4v9WUqvPY9OrDsHs' },
+  title: 'ゴルフLAB | K-Beauty Portal',
+  description: 'ゴルフ用品・クラブの最新情報',
+  openGraph: {
+    title: 'ゴルフLAB',
+    description: 'ゴルフ用品・クラブの最新情報',
+    url: 'https://golf-lab-jp.vercel.app',
+    siteName: 'K-Beauty Portal',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ゴルフLAB',
+    description: 'ゴルフ用品・クラブの最新情報',
+    site: '@beauty_note_j',
+    creator: '@beauty_note_j',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=DM+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3460729726810386" crossOrigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet"/>
       </head>
-      <body>
-        <header className="site-header">
-          <div className="header-inner">
-            <a href="/" className="site-logo">
-              <span className="logo-mark">⛳</span>
-              <span className="logo-text">ゴルフLAB</span>
-            </a>
-            <nav className="site-nav">
-              <a href="/">ホーム</a>
-              <a href="/blog">記事一覧</a>
-            </nav>
-          </div>
-        </header>
-        <main>{children}</main>
-        <footer className="site-footer">
-          <div className="footer-inner">
-            <p>© 2025 ゴルフLAB</p>
-            <p className="footer-note">本サイトはアフィリエイト広告を含みます</p>
-          </div>
-        </footer>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
