@@ -1,2 +1,3 @@
 # golf-lab-jp
-ゴルフLAB
+
+Updated: 2026-04-01
